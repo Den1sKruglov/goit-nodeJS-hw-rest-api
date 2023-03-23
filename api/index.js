@@ -38,3 +38,4 @@ router.patch(
 router.delete('/:id', isValidId, contactsCntr.remove)
 
 module.exports = router
+
