@@ -2,9 +2,9 @@ const { User } = require("../../model/user");
 const { HttpError } = require('../../helpers');
 
 const subscription = async (req, res) => {
-    const { id } = req.params;
-    console.log(id)
-    const result = await User.findByIdAndUpdate(id, req.body, { new: true });
+  const { id } = req.params;
+  console.log(id)
+  const result = await User.findByIdAndUpdate(id, req.body, { new: true });
   if (!result) {
     throw HttpError(404, `Not found`);
   }
